@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  lol-bot:
+    build: .
+    container_name: vertice_lol_bot
+    restart: always
+    env_file:
+      - .env
+    volumes:
+      - ./inputs:/app/inputs
+      - ./output:/app/output
